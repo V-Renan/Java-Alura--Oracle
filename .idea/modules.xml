@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Java-Alura--Oracle.iml" filepath="$PROJECT_DIR$/.idea/Java-Alura--Oracle.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Perfil1/Perfil1.iml" filepath="$PROJECT_DIR$/Perfil1/Perfil1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/primeiroProjeto/primeiroProjeto.iml" filepath="$PROJECT_DIR$/primeiroProjeto/primeiroProjeto.iml" />
     </modules>
   </component>
 </project>
