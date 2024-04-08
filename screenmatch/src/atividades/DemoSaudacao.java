@@ -5,7 +5,7 @@ package atividades;
  * @date 4/8/2024$
  * Description:
  */
-public class Demo {
+public class DemoSaudacao {
     public static void main(String[] args) {
         Saudacao mensagem = new Saudacao();
 
