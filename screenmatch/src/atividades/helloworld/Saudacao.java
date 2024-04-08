@@ -1,4 +1,4 @@
-package atividades;
+package atividades.helloworld;
 
 /**
  * @author Victor$
