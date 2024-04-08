@@ -6,4 +6,9 @@ package atividades.calculadora;
  * Description:
  */
 public class Calculadora {
+    int numero;
+
+    int dobro(int numero) {
+       return  numero + numero;
+    }
 }
