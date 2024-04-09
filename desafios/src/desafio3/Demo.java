@@ -13,7 +13,7 @@ public class Demo {
         System.out.println(pessoa1.getNome());
         System.out.println(pessoa1.getIdade());
         pessoa1.maiorOuMenorIdade();
-        
+
         pessoa2.exibirDados();
     }
 }
