@@ -7,7 +7,13 @@ package desafio3;
  */
 public class Demo {
     public static void main(String[] args) {
-        IdadePessoa pessoa1 = new IdadePessoa("Victor", 18);
+        IdadePessoa pessoa1 = new IdadePessoa("Victor", 24);
+        IdadePessoa pessoa2 = new IdadePessoa("Renan", 15);
+
+        System.out.println(pessoa1.getNome());
+        System.out.println(pessoa1.getIdade());
         pessoa1.maiorOuMenorIdade();
+        
+        pessoa2.exibirDados();
     }
 }

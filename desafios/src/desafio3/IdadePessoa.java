@@ -39,4 +39,12 @@ public class IdadePessoa {
             System.out.println("A pessoa é menor de idade!");
         }
     }
+
+    public void exibirDados() {
+        System.out.println("\n-------------------------------------");
+        String dados = "Nome: " + getNome() +
+                "\nIdade: " + getIdade();
+        System.out.println(dados);
+        maiorOuMenorIdade();
+    }
 }
