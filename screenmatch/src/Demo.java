@@ -1,11 +1,12 @@
 import br.com.alura.modelos.Filme;
+import br.com.alura.modelos.Serie;
 
 /**
  * @author Victor$
  * @date 4/7/2024$
  * Description:
  */
-public class DemoFilme {
+public class Demo {
     public static void main(String[] args) {
         Filme filme = new Filme();
 
@@ -18,6 +19,14 @@ public class DemoFilme {
         filme.avalia(9.9);
         filme.avalia(9);
         System.out.println("Total de avaliacoes: " + filme.getTotalDeAvaliacao());
-        System.out.printf("Media de avaliacoes: %.1f", filme.pegaMedia());
+        System.out.printf("Media de avaliacoes: %.1f\n", filme.pegaMedia());
+
+        Serie lost = new Serie();
+        lost.setNome("Lost");
+        lost.setAnoDeLancamento(2000);
+        lost.setTemporadas(10);
+        lost.setEpisodiosPorTemporada(10);
+        lost.setMinutosPorEpisodio(50);
+        System.out.println("Duracao para maratonar lost: " + lost.getDuracaoEmMinutos());
     }
 }
