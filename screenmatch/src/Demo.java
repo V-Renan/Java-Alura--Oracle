@@ -38,6 +38,7 @@ public class Demo {
         CalculadoraDeTempo calc = new CalculadoraDeTempo();
         calc.inclui(filme1);
         calc.inclui(filme2);
+        calc.inclui(lost);
         System.out.println(calc.getTempoTotal());
     }
 }

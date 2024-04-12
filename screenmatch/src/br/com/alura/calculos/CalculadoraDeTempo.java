@@ -1,6 +1,6 @@
 package br.com.alura.calculos;
 
-import br.com.alura.modelos.Filme;
+import br.com.alura.modelos.Titulo;
 
 /**
  * @author Victor$
@@ -12,7 +12,13 @@ public class CalculadoraDeTempo {
     public int getTempoTotal() {
         return tempoTotal;
     }
-    public void inclui(Filme f) {
-        tempoTotal += f.getDuracaoEmMinutos();
+//    public void inclui(Filme f) {
+//        tempoTotal += f.getDuracaoEmMinutos();
+//    }
+//    public void inclui(Serie s) {
+//        tempoTotal += s.getDuracaoEmMinutos();
+//    }
+    public void inclui(Titulo titulo) {
+        this.tempoTotal+= titulo.getDuracaoEmMinutos();
     }
 }
