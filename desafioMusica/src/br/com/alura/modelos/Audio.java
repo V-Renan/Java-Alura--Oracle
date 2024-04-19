@@ -10,12 +10,12 @@ public class Audio implements Metodos{
     private double duracao;
     private int totalReproducao;
     private int curtidas;
-    private double classificacao;
+    private int classificacao;
 
     public Audio() {
     }
 
-    public Audio(String titulo, double duracao, int totalReproducao, int curtidas, double classificacao) {
+    public Audio(String titulo, double duracao, int totalReproducao, int curtidas, int classificacao) {
         this.titulo = titulo;
         this.duracao = duracao;
         this.totalReproducao = totalReproducao;
@@ -45,19 +45,19 @@ public class Audio implements Metodos{
     public int getCurtidas() {
         return curtidas;
     }
-    public double getClassificacao() {
+    public int getClassificacao() {
         return classificacao;
     }
 
     @Override
     public void curte() {
         this.curtidas++;
-        System.out.println("Total de curtidas: " + getCurtidas());
+       // System.out.println("Total de curtidas: " + getCurtidas());
     }
 
     @Override
     public void reproduz() {
         this.totalReproducao++;
-        System.out.println("Voce esta ouvindo: " + getTitulo());
+       // System.out.println("Voce esta ouvindo: " + getTitulo());
     }
 }
