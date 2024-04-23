@@ -34,10 +34,9 @@ public class Pessoas {
         this.nome = nome;
         this.idade = idade;
     }
-
     @Override
     public String toString() {
         return "Nome: " + this.nome +
-                " (Idade: " + this.idade + ")";
+                " (Idade: " + this.idade + " anos)";
     }
 }
