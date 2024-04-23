@@ -61,14 +61,24 @@ public class Demo {
         filmeDoVictor.avalia(10);
 
         ArrayList<Filme> listaDeFilmes = new ArrayList<>();
+        // adicionando o filme com o .add disponivel no proprio array (tambem pode ser criado um metodo para adicionar)
         listaDeFilmes.add(filmeDoVictor);
         listaDeFilmes.add(filme1);
         listaDeFilmes.add(filme2);
+
+        // .size mostra o tamanho do array
         System.out.println("Tamanho da lista: " + listaDeFilmes.size());
+
+        // acessando o arrauy pelo index
         System.out.println("Primeiro filme: " + listaDeFilmes.get(0).getNome());
+
+        // percorrendo o array com for
         for (Filme filme : listaDeFilmes) {
             System.out.println("\nFilme: " + filme.getNome());
         }
+
+        // usando metodo toString
         System.out.println("toString do filme: " + listaDeFilmes.get(0).toString());
+
     }
 }
