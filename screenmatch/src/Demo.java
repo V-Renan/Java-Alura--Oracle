@@ -13,9 +13,8 @@ import java.util.ArrayList;
  */
 public class Demo {
     public static void main(String[] args) {
-        Filme filme1 = new Filme();
+        Filme filme1 = new Filme("Avengers - Infinity War");
 
-        filme1.setNome("Avengers - Infinity War");
         filme1.setAnoDeLancamento(2018);
         filme1.setDuracaoEmMinutos(150);
 
@@ -34,8 +33,7 @@ public class Demo {
         lost.setMinutosPorEpisodio(50);
         System.out.println("Duracao para maratonar lost: " + lost.getDuracaoEmMinutos());
 
-        Filme filme2 = new Filme();
-        filme2.setNome("Tropa de Elite");
+        Filme filme2 = new Filme("Tropa de Elite");
         filme2.setAnoDeLancamento(2010);
         filme2.setDuracaoEmMinutos(200);
 
@@ -54,13 +52,13 @@ public class Demo {
         episodio.setTotalVisualizacoes(300);
         filtro.filtra(episodio);
 
-        var filmeDoVictor = new Filme();
+        var filmeDoVictor = new Filme("Um Lugar Silencioso");
         filmeDoVictor.setDuracaoEmMinutos(130);
-        filmeDoVictor.setNome("Um Lugar Silencioso");
         filmeDoVictor.setAnoDeLancamento(2018);
         filmeDoVictor.avalia(10);
 
         ArrayList<Filme> listaDeFilmes = new ArrayList<>();
+
         // adicionando o filme com o .add disponivel no proprio array (tambem pode ser criado um metodo para adicionar)
         listaDeFilmes.add(filmeDoVictor);
         listaDeFilmes.add(filme1);
