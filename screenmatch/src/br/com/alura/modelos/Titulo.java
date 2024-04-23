@@ -52,13 +52,15 @@ public class Titulo {
     public void avalia(double nota) {
         somaAvalicao+= nota;
         totalDeAvaliacao++;
+        System.out.println();
     }
 
     public void exibirFichaTecnica() {
-        System.out.println("\n-------------------------------------------");
+        System.out.println("-------------------------------------------");
         System.out.println("Nome: " + nome);
         System.out.println("Ano de lancamento: " + anoDeLancamento);
         System.out.println("Duracao: " + duracaoEmMinutos);
+        System.out.println("-------------------------------------------");
     }
 
     public double pegaMedia() {

@@ -4,6 +4,8 @@ import br.com.alura.modelos.Episodio;
 import br.com.alura.modelos.Filme;
 import br.com.alura.modelos.Serie;
 
+import java.util.ArrayList;
+
 /**
  * @author Victor$
  * @date 4/7/2024$
@@ -51,5 +53,22 @@ public class Demo {
         episodio.setSerie(lost);
         episodio.setTotalVisualizacoes(300);
         filtro.filtra(episodio);
+
+        var filmeDoVictor = new Filme();
+        filmeDoVictor.setDuracaoEmMinutos(130);
+        filmeDoVictor.setNome("Um Lugar Silencioso");
+        filmeDoVictor.setAnoDeLancamento(2018);
+        filmeDoVictor.avalia(10);
+
+        ArrayList<Filme> listaDeFilmes = new ArrayList<>();
+        listaDeFilmes.add(filmeDoVictor);
+        listaDeFilmes.add(filme1);
+        listaDeFilmes.add(filme2);
+        System.out.println("Tamanho da lista: " + listaDeFilmes.size());
+        System.out.println("Primeiro filme: " + listaDeFilmes.get(0).getNome());
+        for (Filme filme : listaDeFilmes) {
+            System.out.println("\nFilme: " + filme.getNome());
+        }
+        System.out.println("toString do filme: " + listaDeFilmes.get(0).toString());
     }
 }
