@@ -8,11 +8,8 @@ import br.com.alura.calculos.Classficavel;
  * Description:
  */
 public class Filme extends Titulo implements Classficavel {
-    public Filme() {
-
-    }
-    public Filme(String nome) {
-        this.setNome(nome);
+    public Filme(String nome, int anoDeLancamento) {
+        super(nome, anoDeLancamento);
     }
 
     private String diretor;

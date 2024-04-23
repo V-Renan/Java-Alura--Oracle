@@ -13,9 +13,8 @@ import java.util.ArrayList;
  */
 public class Demo {
     public static void main(String[] args) {
-        Filme filme1 = new Filme("Avengers - Infinity War");
+        Filme filme1 = new Filme("Avengers - Infinity War", 2018);
 
-        filme1.setAnoDeLancamento(2018);
         filme1.setDuracaoEmMinutos(150);
 
         filme1.exibirFichaTecnica();
@@ -24,27 +23,30 @@ public class Demo {
         filme1.avalia(9);
         System.out.println("Total de avaliacoes: " + filme1.getTotalDeAvaliacao());
         System.out.printf("Media de avaliacoes: %.1f\n", filme1.pegaMedia());
+        System.out.println("-------------------------------------------");
 
-        Serie lost = new Serie();
-        lost.setNome("Lost");
-        lost.setAnoDeLancamento(2000);
+        Serie lost = new Serie("Lost", 2000);
         lost.setTemporadas(10);
         lost.setEpisodiosPorTemporada(10);
         lost.setMinutosPorEpisodio(50);
+        lost.exibirFichaTecnica();
         System.out.println("Duracao para maratonar lost: " + lost.getDuracaoEmMinutos());
 
-        Filme filme2 = new Filme("Tropa de Elite");
-        filme2.setAnoDeLancamento(2010);
+        Filme filme2 = new Filme("Tropa de Elite", 2010);
         filme2.setDuracaoEmMinutos(200);
+        System.out.println("-------------------------------------------");
 
         CalculadoraDeTempo calc = new CalculadoraDeTempo();
         calc.inclui(filme1);
         calc.inclui(filme2);
         calc.inclui(lost);
-        System.out.println(calc.getTempoTotal());
+        System.out.println("Tempo total para maratonar: " + calc.getTempoTotal());
 
         FiltroRecomendacao filtro = new FiltroRecomendacao();
+        System.out.println("-------------------------------------------");
+        System.out.println("O filme: " + filme1.getNome());
         filtro.filtra(filme1);
+        System.out.println("-------------------------------------------");
 
         Episodio episodio = new Episodio();
         episodio.setNumero(1);
@@ -52,9 +54,8 @@ public class Demo {
         episodio.setTotalVisualizacoes(300);
         filtro.filtra(episodio);
 
-        var filmeDoVictor = new Filme("Um Lugar Silencioso");
+        var filmeDoVictor = new Filme("Um Lugar Silencioso", 2028);
         filmeDoVictor.setDuracaoEmMinutos(130);
-        filmeDoVictor.setAnoDeLancamento(2018);
         filmeDoVictor.avalia(10);
 
         ArrayList<Filme> listaDeFilmes = new ArrayList<>();
