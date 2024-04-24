@@ -4,6 +4,7 @@ import br.com.alura.modelos.Titulo;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 /**
@@ -49,6 +50,10 @@ public class PrincipalComListas {
 
         System.out.println("\nLista de titulos ordenados...");
         Collections.sort(lista);
+        lista.forEach(System.out::println);
+
+        lista.sort(Comparator.comparing(Titulo::getAnoDeLancamento));
+        System.out.println("\nLista de titulos ordenados por data...");
         lista.forEach(System.out::println);
     }
 }
