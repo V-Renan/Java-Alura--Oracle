@@ -3,6 +3,7 @@ import br.com.alura.modelos.Serie;
 import br.com.alura.modelos.Titulo;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -34,5 +35,20 @@ public class PrincipalComListas {
             }
         }
 
+        List<String> buscaPorArtista = new ArrayList<>();
+        buscaPorArtista.add("Adam Sandler");
+        buscaPorArtista.add("Talita");
+        buscaPorArtista.add("Maria");
+
+        System.out.println("\nSem ordenacao...");
+        System.out.println(buscaPorArtista);
+
+        Collections.sort(buscaPorArtista);
+        System.out.println("Com ordenacao...");
+        System.out.println(buscaPorArtista);
+
+        System.out.println("\nLista de titulos ordenados...");
+        Collections.sort(lista);
+        lista.forEach(System.out::println);
     }
 }

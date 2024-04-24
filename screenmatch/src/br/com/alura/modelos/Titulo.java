@@ -5,7 +5,7 @@ package br.com.alura.modelos;
  * @date 4/9/2024$
  * Description:
  */
-public class Titulo {
+public class Titulo implements Comparable<Titulo>{
     private String nome;
     private int anoDeLancamento;
     private boolean incluidoNoPlano;
@@ -68,5 +68,10 @@ public class Titulo {
 
     public double pegaMedia() {
         return somaAvalicao / totalDeAvaliacao;
+    }
+
+    @Override
+    public int compareTo(Titulo outroTitulo) {
+        return this.getNome().compareTo(outroTitulo.getNome());
     }
 }
