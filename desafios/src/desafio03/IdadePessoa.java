@@ -1,4 +1,4 @@
-package desafio3;
+package desafio03;
 
 /**
  * @author Victor$

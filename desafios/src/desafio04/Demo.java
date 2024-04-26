@@ -1,6 +1,4 @@
-package desafio4;
-
-import javax.swing.*;
+package desafio04;
 
 /**
  * @author Victor$
