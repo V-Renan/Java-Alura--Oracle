@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Java-Alura--Oracle.iml" filepath="$PROJECT_DIR$/.idea/Java-Alura--Oracle.iml" />
       <module fileurl="file://$PROJECT_DIR$/Perfil1/Perfil1.iml" filepath="$PROJECT_DIR$/Perfil1/Perfil1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/desafioAPI.iml" filepath="$PROJECT_DIR$/desafioAPI.iml" />
       <module fileurl="file://$PROJECT_DIR$/desafioMusica/desafioMusica.iml" filepath="$PROJECT_DIR$/desafioMusica/desafioMusica.iml" />
       <module fileurl="file://$PROJECT_DIR$/desafios/desafios.iml" filepath="$PROJECT_DIR$/desafios/desafios.iml" />
       <module fileurl="file://$PROJECT_DIR$/primeiroProjeto/primeiroProjeto.iml" filepath="$PROJECT_DIR$/primeiroProjeto/primeiroProjeto.iml" />
