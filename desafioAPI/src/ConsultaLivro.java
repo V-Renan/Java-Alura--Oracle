@@ -13,9 +13,8 @@ public class ConsultaLivro {
         System.out.println("Digite o nome do livro: ");
         var titulo = scan.nextLine().replace(" ","+");
 
-        String chave = "AIzaSyB-ODRV78k71TdNzvCB1ULkzoTCV6so5_Q";
 
-        String endereco = "https://www.googleapis.com/books/v1/volumes?q=" + titulo + "&key" + chave;
+        String endereco = "https://www.googleapis.com/books/v1/volumes?q=" + titulo + "&key";
 
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest

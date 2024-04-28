@@ -16,7 +16,7 @@ public class PrincipalComBusca {
         System.out.println("Digite o nome do titulo: ");
         String busca = scan.nextLine().replace(" ", "+");
 
-        String endereco = "http://www.omdbapi.com/?t=" + busca + "&apikey=ceea504d";
+        String endereco = "http://www.omdbapi.com/?t=" + busca + "&apikey=";
 
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
