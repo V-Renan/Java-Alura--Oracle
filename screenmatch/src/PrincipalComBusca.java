@@ -1,3 +1,9 @@
+import br.com.alura.modelos.Titulo;
+import br.com.alura.modelos.TituloOmdb;
+import com.google.gson.FieldNamingPolicy;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
 import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;
@@ -15,8 +21,9 @@ public class PrincipalComBusca {
         Scanner scan = new Scanner(System.in);
         System.out.println("Digite o nome do titulo: ");
         String busca = scan.nextLine().replace(" ", "+");
+        String chave = "ceea504d";
 
-        String endereco = "http://www.omdbapi.com/?t=" + busca + "&apikey=";
+        String endereco = "http://www.omdbapi.com/?t=" + busca + "&apikey=" + chave;
 
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
@@ -25,7 +32,21 @@ public class PrincipalComBusca {
 
         HttpResponse<String> response = client
                 .send(request, HttpResponse.BodyHandlers.ofString());
-        System.out.println(response.body());
+
+        String json = response.body();
+        System.out.println(json);
+
+        Gson gson = new GsonBuilder()
+                .setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE)
+                .create();
+        //Titulo meuTitulo = gson.fromJson(json, Titulo.class);
+        TituloOmdb meuTituloOmdb = gson.fromJson(json, TituloOmdb.class);
+        System.out.println("Titulo OMDB");
+        System.out.println(meuTituloOmdb);
+
+        Titulo meuTitulo = new Titulo(meuTituloOmdb);
+        System.out.println("\nTitulo ja convertido");
+        System.out.println(meuTitulo);
 
         scan.close();
     }
