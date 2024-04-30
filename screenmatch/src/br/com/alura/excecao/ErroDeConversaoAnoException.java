@@ -1,0 +1,17 @@
+package br.com.alura.excecao;
+
+/**
+ * @author Victor$
+ * @date 4/30/2024$
+ * Description:
+ */
+public class ErroDeConversaoAnoException extends RuntimeException {
+    private String mensagem;
+    public ErroDeConversaoAnoException(String mensagem) {
+        this.mensagem = mensagem;
+    }
+    @Override
+    public String getMessage() {
+        return this.mensagem;
+    }
+}

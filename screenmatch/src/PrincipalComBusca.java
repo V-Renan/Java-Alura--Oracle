@@ -1,3 +1,4 @@
+import br.com.alura.excecao.ErroDeConversaoAnoException;
 import br.com.alura.modelos.Titulo;
 import br.com.alura.modelos.TituloOmdb;
 import com.google.gson.FieldNamingPolicy;
@@ -19,8 +20,8 @@ import java.util.Scanner;
 public class PrincipalComBusca {
     public static void main(String[] args) throws IOException, InterruptedException {
         Scanner scan = new Scanner(System.in);
-        System.out.println("Digite o nome do titulo: ");
-        String busca = scan.nextLine().replace(" ", "+");
+        System.out.print("Digite o nome do titulo: ");
+        String busca = scan.next().replace(" ", "+");
         String chave = "ceea504d";
 
         String endereco = "http://www.omdbapi.com/?t=" + busca + "&apikey=" + chave;
@@ -51,9 +52,13 @@ public class PrincipalComBusca {
         } catch (NumberFormatException e) {
             System.out.println("Aconteceu um erro!");
             System.out.println(e.getMessage());
+        } catch (IllegalArgumentException e) {
+            System.out.println("Erro de busca...");
+        } catch (ErroDeConversaoAnoException e) {
+            System.out.println(e.getMessage());
         }
-
         System.out.println("O programa finalizou corretamente!");
+
         scan.close();
     }
 }
