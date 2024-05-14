@@ -40,6 +40,8 @@ public class PrincipalComBusca {
                 break;
             }
 
+            String chave = "ceea504d";
+            String endereco = "http://www.omdbapi.com/?t=" + busca + "&apikey=" + chave;
 
             try {
                 HttpClient client = HttpClient.newHttpClient();
