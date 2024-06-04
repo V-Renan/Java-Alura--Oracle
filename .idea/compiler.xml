@@ -12,6 +12,7 @@
     <bytecodeTargetLevel>
       <module name="Java-Alura--Oracle" target="21" />
       <module name="screen" target="21" />
+      <module name="screenmatch-spring" target="21" />
     </bytecodeTargetLevel>
   </component>
 </project>
