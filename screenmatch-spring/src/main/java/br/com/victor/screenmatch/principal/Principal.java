@@ -1,9 +1,12 @@
 package br.com.victor.screenmatch.principal;
 
 import br.com.victor.screenmatch.model.DadosSerie;
+import br.com.victor.screenmatch.model.DadosTemporada;
 import br.com.victor.screenmatch.service.ConsumoApi;
 import br.com.victor.screenmatch.service.ConverteDados;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Principal {
@@ -14,9 +17,20 @@ public class Principal {
     private Scanner scan = new Scanner(System.in);
     public void exibirMenu() {
         System.out.println("Digite o nome da serie: ");
-        var nomeSerie = scan.nextLine();
-        var json = consumo.obterDados(ENDERECO + nomeSerie.replace(" ", "+" + API_KEY));
+        var nomeSerie = scan.nextLine().replace(" ","+");
+        var json = consumo.obterDados(ENDERECO + nomeSerie + API_KEY);
         DadosSerie dados = conversor.obterDados(json, DadosSerie.class);
         System.out.println(dados);
+
+        List<DadosTemporada> temporadas = new ArrayList<>();
+
+        for (int i = 1; i<= dados.totalTemporadas(); i++) {
+            json = consumo.obterDados("https://www.omdbapi.com/?t=" + nomeSerie + "&season=" + i + "&apikey=d7c6eae8");
+            DadosTemporada dadosTemporada1 = conversor.obterDados(json, DadosTemporada.class);
+            temporadas.add(dadosTemporada1);
+        }
+
+        temporadas.forEach(System.out::println);
+        //temporadas.forEach(DadosTemporada::exibirDetalhe);
     }
 }
