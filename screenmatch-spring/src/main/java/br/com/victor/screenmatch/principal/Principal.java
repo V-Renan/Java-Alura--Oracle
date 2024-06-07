@@ -30,7 +30,7 @@ public class Principal {
             temporadas.add(dadosTemporada1);
         }
 
-        temporadas.forEach(System.out::println);
-        //temporadas.forEach(DadosTemporada::exibirDetalhe);
+        //temporadas.forEach(System.out::println);
+        temporadas.forEach(DadosTemporada::exibirDetalhe);
     }
 }
